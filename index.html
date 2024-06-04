@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Thakur</title>
+    <link rel="stylesheet" href="">
+    <script src="https://kit.fontawesome.com/ba4a0c617d.js" crossorigin="anonymous"></script>
+</head>
+<style>
+*{
+    margin: 0%;
+    padding:0%;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth  ;
+}
+
+body{
+    background-color: rgb(71, 82, 81);
+    color: #050505;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(my\ bag.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+     width: 250px;
+     height:130px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px; 
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size 120x;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #d63838;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.heder-text{
+    margin-top:10%;
+    font-size: 30px;
+}
+.heder-text h1{
+    font-size 60px;   
+    margin-top: 20px;
+}
+.heder-text h1 span{
+    color: transparent;
+    font-size:200px;
+    -webkit-text-stroke: 1px #fff;
+    background: url(images\ \(4\).jpeg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+}
+.cutt{
+    display: inline-block;
+}
+.cut{
+    font-family: monospace;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(18),cursor .4s step-end infinite alternate;
+}
+/* ____________________________cursor blinking__________________ */
+@keyframes cursor {
+    50% { border-color: transparent }
+    }
+/*__________________ typing effect_____________________ */
+@keyframes typing {
+    from { width: 0 }
+    }
+
+/* _______________________ABOUT_________________*/
+#about{
+   padding: 88px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 40px;
+}
+.about-col-2{
+    flex-basis: 60%;
+    font-size: 20px;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color:#fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #d63838;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style:none;
+    margin: 10px o;
+}
+.tab-contents ul li span{
+    color:  #a22828;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* _______________________--services--_________________*/
+#services{
+padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transform: 0.9s;
+}
+.work img{
+    width: 100%;
+    border-radius: 10%;
+    display: block;
+}
+.layer{
+    width: 100%;
+    height:0;
+    background:linear-gradient(rgba(162, 150, 215, 0),rgb(138, 73, 13)) ;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14 pxpx;
+    color:rgb(255, 255, 255);
+    transition: height 0.5s;
+    
+} 
+.layer h3{
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: ;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+/*_______________---contct me---____________________*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color:  #a22828;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-right: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    color: #ababab;
+    font-size: 30px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #a22828;
+    transform: translateY(-5px);
+}
+.btn{
+    cursor: pointer;
+    font-size: 18px ;
+    display: block;
+    margin-top:20px ;
+    width:fit-content;
+    border: 1px solid  #a22828;
+    padding: 14px 60px;
+    border-radius: 6px;
+    text-decoration: none;
+    background-color:  #a22828;
+}
+.btn:hover{
+    background-color: white;
+}
+.contact-right form{
+   width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background:#262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+} 
+.thanku{
+    width:100% ;
+    text-align: center;
+    padding: 25px 0;
+    background: #a22828;
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+.msgg{
+    color:  #a22828;
+    margin-top: 20px;
+    display: block  ;
+}
+
+/*------------------for small screen------------------ */
+nav .fas{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(my\ bag\ mobeil.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px; 
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background:  #a22828;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;  
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1 {
+        font-size: ;
+
+    }
+
+}
+
+    
+</style>
+<body >
+    
+    <div id="header">
+        <div class="container">
+            <nav id="sidemenu">
+                <a href="http://adiityathakur.digital/"><img src="logo size-.png" class="logo" ></a>
+                <ul>
+                    <li><a href="#header" style="color: black;"> Home </a></li>
+                    <li><a href="#about" style="color: black;"> About </a></li>
+                    <li><a href="#contact" style="color: black;"> Contact </a></li>
+                    <li><a href="#certification" style="color: black;"> More </a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="heder-text">
+                <h1>I'm </h1> <h1> <span> ADITYA </span></h1> <br>
+                <div class="cutt"> 
+                    <p class="cut">I am Programmer/Developer... </p> 
+                </div>
+            </div>
+        </div>
+    </div>
+  <!____________________________ABOUT TAG_____________________> 
+ <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="passport.jpg" height="770px" width="400px">
+            </div>
+            <div class="about-col-2">
+            <h1 class="sub-title">About me </h1>
+            <h4 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; ">Hello everyone my name is Aditya Pratapsing Thakur .I am from Hingoli. I am studying in MIT COLLEGE OF 
+                RAILYWAY ENGINEERING & RESEARCH , BARSHI . Right now I am pursuing my degree in Computer Science Engineering . I can say that I am studying in one of the best university of my state .I am intrested in computers and coding I always had and intrest
+                in coding so for this purpose I entered this field and I appreciate this field so much . I am intrested in web development , so I want to become best in this field and I am trying
+                hard to be best in this field . I love to explore new things and take new challeges . I have learned multiple programming languages like HTML , C , CSS , JAVASCRIPT , PYTHON , PHP .
+                I believe in myself and in my freetime you will often see me practicing coding . <br>
+                <br>
+                THANK YOU FOR VISITING MY PAGE ...
+
+
+            </h4>
+        
+<!____________________________SUB TITLE'S_______________>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+                <p class="tab-links" onclick="opentab('education')"> Education</p>
+                <p class="tab-links"onclick="opentab('hobby')"> Hobby</p>
+            </div>
+<!____________________________Skills____________________>            
+        <div class="tab-contents active-tab" id="skills">
+            <ul>
+            <li><span>Programming Language</span><br><span>*</span> HTML<br><span>*</span> CSS<br><span>*</span> Python<br><span>*</span> JavaScript<br></li>
+            </ul>
+        </div>
+<!____________________________EDUCATION____________________>  
+        <div class="tab-contents" id="education">
+            <ul>
+            <li><span>10<sup>th</sup></span><br><span>*</span> Bahirji Smarak Vidyalay, Basmat</li><br>
+            <li><span>11<sup>th</sup> & 12<sup>th</sup></span><br><span>*</span> MIT Junior College, Nanded</li><br>
+            <li><span>Graduation</span><br><span>*</span> MIT College of Railway Engineering & Research, Barshi</li><br>
+            </ul>
+        </div>
+<!____________________________HOBBY____________________>   
+        <div class="tab-contents" id="hobby">
+            <ul>
+            <li><span>*</span> swimming</li>
+            <li><span>*</span> Programming</li>
+            <li><span>*</span> Tractor Driving</li>
+            <li><span>*</span> cricket</li>
+            <li><span>*</span> Reading</li>
+        </ul>
+        </div>     
+        </div> 
+    </div>
+</div>
+<!____________________________--Certification--________________>
+
+<div id="certification">
+    <div class="container">
+        <h1 class="sub-title">My certification</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="certification.jpg">
+                <div class="layer">
+                    <h3>Great Learning</h3><br>
+                    <p>I have completed my fine course which is HTML </p>
+                     
+                </div>
+            </div>
+            <div class="work">
+                <img src="certification4.jpg">
+                <div class="layer">
+                    <h3>itronixsolutions</h3><br>
+                    <p>I have competed my fine course which is PYTHON </p> 
+                </div>
+            </div>
+            <div class="work">
+                <img src="certification2.PNG">
+                <div class="layer">
+                    <h3>Linkedin Learning</h3><br>
+                    <p>I have completed my fine course which is JAVA </p> 
+                </div>
+            </div>
+            <div class="work">
+                <img src="certification3.PNG">
+                <div class="layer">
+                    <h3>EDUCBA</h3><br>
+                    <p>I have completed my fine course which is HTML & CSS FRONTEND DEVELOPMENT  </p> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+<!__________________--contact--_________________>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left"> 
+                <h1 class="sub-title"> Contact me</h1>
+                <p><i class="fas fa-paper-plane"></i>hiiadityathakur@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i></i>+91 9392731023 </p><br>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/people/Aditya-Thakur/pfbid035hwHSrdsN7YSEa1K5FS3yGJ9D2FMSK5LxBPD4AuyHMvjFtNiMTXh5z5udU6vCzchl/?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/its_me_adi_official_2003/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/aditya-thakur-466b72237/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=919392731023"><i class="fab fa-whatsapp"></i></a>  
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="your name" required>
+                    <input type="email" name="email" placeholder="your Email" required>
+                    <textarea name="message" name="message" row="10" placeholder="your Message"> </textarea>
+                    <button type="submit" class="btn" onclick="myFunction()"> submit</button>
+                    <script>
+                        function myFunction() {
+                          alert('Thank you... ')
+                          setTimeout(function(){
+                            window.location.reload();
+                            }, 500);;
+                        }
+                        </script>
+                </form>
+                <script>
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbz3XsIlUb20e_x9TDbd_hxJ66ADFzH_9nOWrD_R2-9S5PXpBAEdaSorr2spslDMpJFIaQ/exec'
+                        const form = document.forms['submit-to-google-sheet']
+                      
+                        form.addEventListener('submit', e => {
+                          e.preventDefault()
+                          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                            .then(() => {  window.location.reload(); })
+                            .catch(error => console.error('Error!', error.message))
+                        })
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+</script>
+
+<script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right ="0";
+    }
+    function closemenu(){
+        sidemen.style.right = "-200px";  
+    }
+</script> 
+</body>
+</html>
